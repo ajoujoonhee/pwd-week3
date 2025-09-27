@@ -42,7 +42,10 @@ function ListPage() {
   // React Query로 데이터 가져오기
   const { data, isLoading, error } = useQuery({
     queryKey: ['restaurants'],
-    queryFn: restaurantAPI.getRestaurants,
+    queryFn: async () => {
+      const res = await restaurantAPI.getRestaurants();
+      return res.data;
+    },
   });
 
   if (isLoading) {
@@ -58,9 +61,9 @@ function ListPage() {
     return <div className="error">에러가 발생했습니다: {error.message}</div>;
   }
 
-  const filteredData = selectedCategory === '전체' 
-    ? data?.data 
-    : data?.data.filter(r => r.category === selectedCategory);
+  const filteredData = selectedCategory === '전체'
+  ? data
+  : data?.filter(r => r.category === selectedCategory);
 
   return (
     <PageContainer>
