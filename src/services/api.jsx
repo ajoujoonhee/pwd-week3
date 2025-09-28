@@ -116,4 +116,5 @@ export const restaurantAPI = {
   },
 };
 
-export default api;
+export { api }; 
+export default restaurantAPI;
