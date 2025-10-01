@@ -77,4 +77,5 @@ export const submissionAPI = {
   },
 };
 
-export default api;
+export default restaurantAPI;
+export { api, submissionAPI };
