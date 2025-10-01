@@ -61,9 +61,10 @@ function ListPage() {
     return <div className="error">에러가 발생했습니다: {error.message}</div>;
   }
 
-  const filteredData = selectedCategory === '전체'
-  ? data
-  : data?.filter(r => r.category === selectedCategory);
+  const filteredData =
+    selectedCategory === '전체'
+      ? data
+      : data?.filter(r => r.category === selectedCategory);
 
   return (
     <PageContainer>
