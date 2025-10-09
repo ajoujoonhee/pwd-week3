@@ -2,7 +2,7 @@
 import React, { useMemo, useState } from 'react';
 import styled from '@emotion/styled';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import { submissionAPI, restaurantAPI } from '../services/api';
+import restaurantAPI, { submissionAPI } from '../services/api';
 import { toast } from 'react-toastify';
 
 const Container = styled.div`

@@ -2,7 +2,7 @@
 import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 import PopularRestaurants from '../components/PopularRestaurants';
-import { restaurantAPI } from '../services/api';
+import restaurantAPI from '../services/api';
 import { ClipLoader } from 'react-spinners';
 
 function PopularPage() {

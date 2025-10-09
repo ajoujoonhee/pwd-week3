@@ -3,7 +3,7 @@ import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import styled from '@emotion/styled';
-import { restaurantAPI } from '../services/api';
+import restaurantAPI from '../services/api';
 import { FaStar, FaMapMarkerAlt, FaDollarSign, FaArrowLeft } from 'react-icons/fa';
 import { ClipLoader } from 'react-spinners';
 
