@@ -26,7 +26,7 @@ api.interceptors.response.use(
   }
 );
 
-export const restaurantAPI = {
+const restaurantAPI = {
   getRestaurants: async () => {
     const response = await api.get('/api/restaurants');
     return response.data;
@@ -58,7 +58,7 @@ export const restaurantAPI = {
   },
 };
 
-export const submissionAPI = {
+const submissionAPI = {
   createSubmission: async (payload) => {
     const response = await api.post('/api/submissions', payload);
     return response.data;
